@@ -48,7 +48,7 @@ def lowest_silhouette(mat):
 		
 		for compare in mat:
 			
-			if item != compare:
+			if item != compare and len(item) > 1 and len(compare) > 1:
 				
 				sil = silhouette(item, compare)
 				
