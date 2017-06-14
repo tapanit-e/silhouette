@@ -7,4 +7,5 @@ Takes clustered matrix presentation as an input value and calculates the lowest 
 ```python
 s = lowest_silhouette([[[1, 2, 3], [2, 2, 2]], [[100, 100, 100], [104, 101, 100]]])
 print s
+# 0.97591722927
 ```
