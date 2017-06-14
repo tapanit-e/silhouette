@@ -1,6 +1,8 @@
 import math
 
 def euclidean(first, second):
+	
+	assert len(first) == len(second), 'Vector lengths do not match.'
 
         sum = 0
 
@@ -8,9 +10,7 @@ def euclidean(first, second):
 
                 sum += (first[i] - second[i]) * (first[i] - second[i])
 
-        sum = math.sqrt(sum)
-
-        return sum
+        return math.sqrt(sum)
 
 
 def silhouette(first, second):
@@ -38,3 +38,23 @@ def silhouette(first, second):
 	second_total = second_total / div_second
 
 	return (second_total - first_total) / max(first_total, second_total)
+
+
+def lowest_silhouette(mat):
+	
+	lowest = None
+	
+	for item in mat:
+		
+		for compare in mat:
+			
+			if item != compare:
+				
+				sil = silhouette(item, compare)
+				
+				if lowest == None or sil < lowest:
+					
+					lowest = sil
+					
+	
+	return lowest
