@@ -1,4 +1,4 @@
-# silhouette
+# silhouette index with Python
 
 Plain Python implementation of [silhouette index](https://en.wikipedia.org/wiki/Silhouette_(clustering)).
 
