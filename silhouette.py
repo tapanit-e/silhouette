@@ -14,7 +14,7 @@ def silhouette(first, second):
 	div_second = 0
 	for item in first:
 		for compare in first:
-			if item != compare:
+			if item is not compare:
 				first_total += euclidean(item, compare)
 				div_first += 1
 		for compare in second:
@@ -29,7 +29,7 @@ def lowest_silhouette(mat):
 	lowest = None
 	for item in mat:
 		for compare in mat:
-			if item != compare and len(item) > 1 and len(compare) > 1:
+			if item is not compare and len(item) > 1 and len(compare) > 1:
 				sil = silhouette(item, compare)
 				if lowest == None or sil < lowest:
 					lowest = sil
